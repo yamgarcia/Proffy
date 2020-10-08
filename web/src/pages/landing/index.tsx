@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -8,7 +9,7 @@ import studyIcon from "../../assets/images/icons/study.svg";
 import giveClassesIcon from "../../assets/images/icons/give-classes.svg";
 import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
 
-function Landing() {
+const Landing: React.FC = () => {
   return (
     <>
       <div id='page-landing'>
@@ -17,19 +18,17 @@ function Landing() {
             <img src={logoImg} alt='logoImg Proffy' />
             <h2>Your online learning platform</h2>
           </div>
-
           <img src={landdingImg} alt='landdingImg' className='hero-image' />
-
           <div className='buttons-container'>
-            <a href='\' className='study'>
+            <Link to='/study' className='study'>
               <img src={studyIcon} alt='Study' />
               Study
-            </a>
+            </Link>
 
-            <a href='\' className='give-classes'>
+            <Link to='/give-classes' className='give-classes'>
               <img src={giveClassesIcon} alt='giveClassesIcon' />
               Teach
-            </a>
+            </Link>
           </div>
           <span className='total-connections'>
             Total of 200 connections{" "}
@@ -39,6 +38,6 @@ function Landing() {
       </div>
     </>
   );
-}
+};
 
 export default Landing;
