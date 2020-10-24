@@ -1,31 +1,25 @@
 import React from "react";
+import "./styles.css";
 import PageHeader from "../../components/PageHeader";
+import Input from "../../components/Input";
 
 const TeacherForm: React.FC = () => {
   return (
     <>
-    <div id='page-teacher-form' className='container'>
-      <PageHeader 
-      description="The first step is to fill this form"
-      title='Wanna teach? Welcome aboard!' />
-      <main>
-        <fieldset>
-          <legend>Profile</legend>
-          <div className='input-block'>
-              <label htmlFor='name'>Complete name</label>
-              <input type='text' id='name' />
-          </div>
-          <div className='input-block'>
-              <label htmlFor='Avatar'>Avatar</label>
-              <input type='text' id='Avatar' />
-          </div>
-          <div className='input-block'>
-              <label htmlFor='Whatsapp'>Whatsapp</label>
-              <input type='text' id='Whatsapp' />
-          </div>
-        </fieldset>
-      </main>
-    </div>
+      <div id='page-teacher-form' className='container'>
+        <PageHeader
+          description='The first step is to fill this form'
+          title='Wanna teach? Welcome aboard!'
+        />
+        <main>
+          <fieldset>
+            <legend>Profile</legend>
+            <Input name='name' label='Complete name' />
+            <Input name='Avatar' label='Avatar' />
+            <Input type='number' name='Whatsapp' label='Whatsapp' />
+          </fieldset>
+        </main>
+      </div>
     </>
   );
 };
