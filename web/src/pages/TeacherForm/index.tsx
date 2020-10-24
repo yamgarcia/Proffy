@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
+import warningIcon from "../../assets/images/icons/warning.svg";
 
 const TeacherForm: React.FC = () => {
   return (
@@ -18,6 +19,20 @@ const TeacherForm: React.FC = () => {
             <Input name='Avatar' label='Avatar' />
             <Input type='number' name='Whatsapp' label='Whatsapp' />
           </fieldset>
+          <fieldset>
+            <legend>About the class</legend>
+            <Input name='subject' label='Subject' />
+            <Input name='cost' label='Cost per hour' />
+          </fieldset>
+
+          <footer>
+            <p>
+              <img src={warningIcon} alt='Important' />
+              Important <br />
+              Please fill all fields
+            </p>
+            <button type='button'>Save</button>
+          </footer>
         </main>
       </div>
     </>
