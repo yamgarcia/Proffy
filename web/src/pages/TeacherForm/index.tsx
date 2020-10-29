@@ -4,6 +4,7 @@ import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
 import warningIcon from "../../assets/images/icons/warning.svg";
 import Textarea from "../../components/Textarea";
+import Select from "../../components/Select";
 
 const TeacherForm: React.FC = () => {
   return (
@@ -24,7 +25,19 @@ const TeacherForm: React.FC = () => {
 
           <fieldset>
             <legend>About the class</legend>
-            <Input name='subject' label='Subject' />
+            <Select
+              name='subject'
+              label='Subject'
+              options={[
+                { value: "Art", label: "Art" },
+                { value: "Biology", label: "Biology" },
+                { value: "Math", label: "Math" },
+                { value: "Science", label: "Science" },
+                { value: "History", label: "History" },
+                { value: "Grammar", label: "Grammar" },
+                { value: "Chemistry", label: "Chemistry" },
+              ]}
+            />
             <Input name='cost' label='Cost per hour' />
           </fieldset>
 
