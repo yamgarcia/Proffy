@@ -3,6 +3,7 @@ import "./styles.css";
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
 import warningIcon from "../../assets/images/icons/warning.svg";
+import Textarea from "../../components/Textarea";
 
 const TeacherForm: React.FC = () => {
   return (
@@ -18,7 +19,9 @@ const TeacherForm: React.FC = () => {
             <Input name='name' label='Complete name' />
             <Input name='Avatar' label='Avatar' />
             <Input type='number' name='Whatsapp' label='Whatsapp' />
+            <Textarea name='bio' label='Biography'></Textarea>
           </fieldset>
+
           <fieldset>
             <legend>About the class</legend>
             <Input name='subject' label='Subject' />
