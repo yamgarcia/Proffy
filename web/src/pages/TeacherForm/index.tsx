@@ -40,6 +40,30 @@ const TeacherForm: React.FC = () => {
             />
             <Input name='cost' label='Cost per hour' />
           </fieldset>
+          <fieldset>
+            <legend>
+              Available schedule
+              <button type='button'>+ Add New</button>
+            </legend>
+
+            <div className='schedule-item'>
+              <Select
+                name='week_day'
+                label='Week Day'
+                options={[
+                  { value: "0", label: "Sunday" },
+                  { value: "1", label: "Monday" },
+                  { value: "2", label: "Tuesday" },
+                  { value: "3", label: "Wednesday" },
+                  { value: "4", label: "Thursday" },
+                  { value: "5", label: "Friday" },
+                  { value: "6", label: "Saturday" },
+                ]}
+              />
+              <Input name='from' label='From' type='time' />
+              <Input name='to' label='To' type='time' />
+            </div>
+          </fieldset>
 
           <footer>
             <p>
