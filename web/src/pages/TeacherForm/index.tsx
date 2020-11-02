@@ -7,6 +7,8 @@ import Textarea from "../../components/Textarea";
 import Select from "../../components/Select";
 
 const TeacherForm: React.FC = () => {
+  function addNewScheduleItem() {}
+
   return (
     <>
       <div id='page-teacher-form' className='container'>
@@ -43,7 +45,9 @@ const TeacherForm: React.FC = () => {
           <fieldset>
             <legend>
               Available schedule
-              <button type='button'>+ Add New</button>
+              <button type='button' onClick={addNewScheduleItem}>
+                + Add New
+              </button>
             </legend>
 
             <div className='schedule-item'>
