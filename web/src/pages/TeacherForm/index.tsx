@@ -48,6 +48,7 @@ const TeacherForm: React.FC = () => {
             />
             <Input name='cost' label='Cost per hour' />
           </fieldset>
+
           <fieldset>
             <legend>
               Available schedule
@@ -55,10 +56,12 @@ const TeacherForm: React.FC = () => {
                 + Add New
               </button>
             </legend>
-
             {scheduleItems.map((scheduleItem) => {
               return (
-                <div key={scheduleItem.week_day} className='schedule-item'>
+                <div
+                  key={scheduleItem.week_day + scheduleItem.from}
+                  className='schedule-item'
+                >
                   <Select
                     name='week_day'
                     label='Week Day'
