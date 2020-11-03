@@ -1,11 +1,9 @@
 #page-landing {
   width: 100vw;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: var(--color-text-in-primary);
   background: var(--color-primary);
 }
@@ -43,11 +41,9 @@
   border-radius: 0.8rem;
   /* 700 makes it <b>bolder</b>  */
   font: 700 2rem Archivo;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-decoration: none;
   color: var(--color-button-text);
 
