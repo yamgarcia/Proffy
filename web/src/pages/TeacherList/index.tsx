@@ -40,7 +40,6 @@ const TeacherList: React.FC = () => {
             <Input type='time' name='time' label='Time' />
           </form>
         </PageHeader>
-
         <main>
           <TeacherItem />
           <TeacherItem />

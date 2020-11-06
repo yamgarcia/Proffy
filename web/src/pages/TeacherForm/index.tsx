@@ -30,7 +30,6 @@ const TeacherForm: React.FC = () => {
             <Input type='number' name='Whatsapp' label='Whatsapp' />
             <Textarea name='bio' label='Biography'></Textarea>
           </fieldset>
-
           <fieldset>
             <legend>About the class</legend>
             <Select
@@ -48,7 +47,6 @@ const TeacherForm: React.FC = () => {
             />
             <Input name='cost' label='Cost per hour' />
           </fieldset>
-
           <fieldset>
             <legend>
               Available schedule
@@ -81,7 +79,6 @@ const TeacherForm: React.FC = () => {
               );
             })}
           </fieldset>
-
           <footer>
             <p>
               <img src={warningIcon} alt='Important' />

@@ -23,7 +23,6 @@ const Select: React.FC<SelectProps> = ({ name, label, options, ...rest }) => {
           <option value='' disabled hidden selected>
             Select a Subject
           </option>
-
           {options.map((option) => {
             return (
               <option key={option.value} value={option.value}>
