@@ -5,6 +5,7 @@ import Input from "../../components/Input";
 import warningIcon from "../../assets/images/icons/warning.svg";
 import Textarea from "../../components/Textarea";
 import Select from "../../components/Select";
+import api from "../../services/api";
 
 const TeacherForm: React.FC = () => {
   //* first form
@@ -42,16 +43,7 @@ const TeacherForm: React.FC = () => {
 
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
-
-    console.log({
-      name,
-      avatar,
-      whatsapp,
-      bio,
-      subject,
-      cost,
-      scheduleItems,
-    });
+    api.post("classes");
   }
 
   return (
