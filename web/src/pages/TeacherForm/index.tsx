@@ -43,7 +43,22 @@ const TeacherForm: React.FC = () => {
 
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
-    api.post("classes");
+    api
+      .post("classes", {
+        name,
+        avatar,
+        whatsapp,
+        bio,
+        subject,
+        cost: Number(cost),
+        schedule: scheduleItems,
+      })
+      .then(() => {
+        alert("User Registred");
+      })
+      .catch(() => {
+        alert("Register Error");
+      });
   }
 
   return (
