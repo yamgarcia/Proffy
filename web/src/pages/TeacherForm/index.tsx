@@ -41,9 +41,9 @@ const TeacherForm: React.FC = () => {
     setScheduleItems(updatedScheduleItems);
   }
 
-  function handleCreateClass(e: FormEvent) {
+  async function handleCreateClass(e: FormEvent) {
     e.preventDefault();
-    api
+    await api
       .post("classes", {
         name,
         avatar,
@@ -65,8 +65,8 @@ const TeacherForm: React.FC = () => {
     <>
       <div id='page-teacher-form' className='container'>
         <PageHeader
-          description='The first step is to fill this form'
           title='Wanna teach? Welcome aboard!'
+          description='The first step is to fill this form'
         />
         <main>
           <form onSubmit={handleCreateClass}>
