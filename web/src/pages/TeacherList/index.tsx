@@ -1,12 +1,14 @@
 import React, { FormEvent, useState } from "react";
 import "./styles.css";
 import PageHeader from "../../components/PageHeader";
-import TeacherItem from "../../components/TeacherItem";
+import TeacherItem, { Teacher } from "../../components/TeacherItem";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
 import api from "../../services/api";
 
-const TeacherList: React.FC = () => {
+const TeacherList: React.FC<Teacher> = () => {
+  const [teachers, setTeachers] = useState([]);
+
   const [subject, setSubject] = useState("");
   const [week_day, setWeek_day] = useState("");
   const [time, setTime] = useState("");
@@ -22,7 +24,7 @@ const TeacherList: React.FC = () => {
       },
     });
 
-    console.log(res.data);
+    setTeachers(res.data);
   }
 
   return (
@@ -76,10 +78,9 @@ const TeacherList: React.FC = () => {
           </form>
         </PageHeader>
         <main>
-          <TeacherItem />
-          <TeacherItem />
-          <TeacherItem />
-          <TeacherItem />
+          {teachers.map((teacher: Teacher) => {
+            return <TeacherItem key={teacher.id} teacher={teacher} />;
+          })}
         </main>
       </div>
     </>
