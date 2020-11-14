@@ -1,4 +1,6 @@
 import React, { FormEvent, useState } from "react";
+import { useHistory } from "react-router-dom";
+
 import "./styles.css";
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
@@ -8,6 +10,7 @@ import Select from "../../components/Select";
 import api from "../../services/api";
 
 const TeacherForm: React.FC = () => {
+  const history = useHistory();
   //* first form
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
@@ -55,6 +58,8 @@ const TeacherForm: React.FC = () => {
       })
       .then(() => {
         alert("User Registred");
+
+        history.push("/");
       })
       .catch(() => {
         alert("Register Error");
